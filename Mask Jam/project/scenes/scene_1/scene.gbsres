@@ -1,0 +1,30 @@
+{
+  "_resourceType": "scene",
+  "id": "9f4ff558-f141-413b-a234-dec1b51d628e",
+  "_index": 0,
+  "name": "Scene 1",
+  "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "TOPDOWN",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_1",
+  "x": 107,
+  "y": 70,
+  "script": [
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "Each mask should have an assigned palette that it changes, opening up/revealing a certain group/kind of thing(s)."
+      },
+      "id": "843d041d-de2d-40ee-b2d7-b4385825fbe1"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

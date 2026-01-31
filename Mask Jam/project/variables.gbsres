@@ -1,0 +1,35 @@
+{
+  "_resourceType": "variables",
+  "variables": [
+    {
+      "id": "1",
+      "name": "MaskAmount",
+      "symbol": "var_maskamount"
+    },
+    {
+      "id": "2",
+      "name": "HasMask1",
+      "symbol": "var_hasmask1"
+    },
+    {
+      "id": "3",
+      "name": "HasMask2",
+      "symbol": "var_hasmask2"
+    },
+    {
+      "id": "4",
+      "name": "HasMask3",
+      "symbol": "var_hasmask3"
+    },
+    {
+      "id": "5",
+      "name": "HasMask4",
+      "symbol": "var_hasmask4"
+    },
+    {
+      "id": "0",
+      "name": "MaskHas",
+      "symbol": "var_maskhas"
+    }
+  ]
+}
