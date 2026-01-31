@@ -2,6 +2,11 @@
   "_resourceType": "variables",
   "variables": [
     {
+      "id": "0",
+      "name": "MaskHas",
+      "symbol": "var_maskhas"
+    },
+    {
       "id": "1",
       "name": "MaskAmount",
       "symbol": "var_maskamount"
@@ -25,11 +30,6 @@
       "id": "5",
       "name": "HasMask4",
       "symbol": "var_hasmask4"
-    },
-    {
-      "id": "0",
-      "name": "MaskHas",
-      "symbol": "var_maskhas"
     }
   ]
 }

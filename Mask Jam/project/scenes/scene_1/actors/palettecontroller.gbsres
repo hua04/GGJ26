@@ -23,8 +23,8 @@
         "flag": 3,
         "__collapseElse": false,
         "__disableElse": false,
-        "__comment": true,
-        "__collapse": true
+        "__comment": false,
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -34,7 +34,7 @@
               "variable": "0",
               "flag": 2,
               "__collapseElse": false,
-              "__disableElse": true
+              "__disableElse": false
             },
             "children": {
               "true": [
@@ -43,8 +43,8 @@
                   "args": {
                     "variable": "0",
                     "flag": 1,
-                    "__collapseElse": true,
-                    "__disableElse": true
+                    "__collapseElse": false,
+                    "__disableElse": false
                   },
                   "children": {
                     "true": [
@@ -53,8 +53,8 @@
                         "args": {
                           "variable": "0",
                           "flag": 0,
-                          "__collapseElse": true,
-                          "__disableElse": true
+                          "__collapseElse": false,
+                          "__disableElse": false
                         },
                         "children": {
                           "true": [
@@ -108,17 +108,95 @@
                               "id": "85eee9e4-a887-45af-b52a-da3807de736e"
                             }
                           ],
-                          "false": []
+                          "false": [
+                            {
+                              "command": "EVENT_TEXT",
+                              "args": {
+                                "text": [
+                                  "YOU ARE NOT READY"
+                                ],
+                                "__section": "text",
+                                "avatarId": "",
+                                "minHeight": 4,
+                                "maxHeight": 7,
+                                "textX": 1,
+                                "textY": 1,
+                                "textHeight": 5,
+                                "position": "bottom",
+                                "clearPrevious": true,
+                                "showFrame": "true",
+                                "speedIn": -1,
+                                "speedOut": -1,
+                                "closeWhen": "key",
+                                "closeButton": "a",
+                                "closeDelayTime": 0.5,
+                                "closeDelayFrames": 30
+                              },
+                              "id": "aeb73206-a143-4fca-8912-31d876da146a"
+                            }
+                          ]
                         },
                         "id": "6285d871-ee09-49da-984c-002d843f07ee"
                       }
                     ],
-                    "false": []
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "YOU ARE NOT READY"
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "b6122590-97df-49fb-a3f9-1f86a6b33860"
+                      }
+                    ]
                   },
                   "id": "45fe6b72-3126-450d-83af-975f6e03cbe0"
                 }
               ],
-              "false": []
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "YOU ARE NOT READY"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "f95477e5-78f1-4588-b417-31ed167efcbd"
+                }
+              ]
             },
             "id": "88c5b95b-c8fa-4d89-9fe4-cbc2d92d686f"
           }
@@ -167,7 +245,9 @@
             "value": 4
           }
         },
-        "__collapseElse": false
+        "__collapseElse": false,
+        "__disableElse": false,
+        "__comment": true
       },
       "children": {
         "true": [
@@ -195,6 +275,30 @@
               "closeDelayFrames": 30
             },
             "id": "b6c5d3f7-bfee-4acc-8ab3-b66ed317b0e1"
+          },
+          {
+            "command": "EVENT_FADE_OUT",
+            "args": {
+              "speed": "2"
+            },
+            "id": "63472d10-eb8b-4360-82a9-372e62f763ed"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "9f4ff558-f141-413b-a234-dec1b51d628e",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              },
+              "direction": "",
+              "fadeSpeed": 3
+            },
+            "id": "27a2f6c0-a4f2-4dc1-86bc-112db6116463"
           }
         ],
         "false": [
@@ -232,7 +336,9 @@
   "updateScript": [
     {
       "command": "EVENT_LOOP",
-      "args": {},
+      "args": {
+        "__collapse": false
+      },
       "children": {
         "true": [
           {
@@ -258,9 +364,9 @@
                   "command": "EVENT_PALETTE_SET_BACKGROUND",
                   "args": {
                     "palette0": "default-bg-1",
-                    "palette1": "keep",
-                    "palette2": "keep",
-                    "palette3": "keep",
+                    "palette1": "default-bg-1",
+                    "palette2": "default-bg-1",
+                    "palette3": "default-bg-1",
                     "palette4": "keep",
                     "palette5": "keep",
                     "palette6": "keep",
@@ -292,10 +398,10 @@
                       {
                         "command": "EVENT_PALETTE_SET_BACKGROUND",
                         "args": {
-                          "palette0": "default-bg-2",
-                          "palette1": "keep",
-                          "palette2": "keep",
-                          "palette3": "keep",
+                          "palette0": "default-bg-1",
+                          "palette1": "default-bg-2",
+                          "palette2": "default-bg-2",
+                          "palette3": "default-bg-2",
                           "palette4": "keep",
                           "palette5": "keep",
                           "palette6": "keep",
@@ -326,10 +432,10 @@
                             {
                               "command": "EVENT_PALETTE_SET_BACKGROUND",
                               "args": {
-                                "palette0": "default-bg-3",
-                                "palette1": "keep",
-                                "palette2": "keep",
-                                "palette3": "keep",
+                                "palette0": "default-bg-1",
+                                "palette1": "default-bg-2",
+                                "palette2": "default-bg-3",
+                                "palette3": "default-bg-2",
                                 "palette4": "keep",
                                 "palette5": "keep",
                                 "palette6": "keep",
@@ -360,10 +466,10 @@
                                   {
                                     "command": "EVENT_PALETTE_SET_BACKGROUND",
                                     "args": {
-                                      "palette0": "default-bg-4",
-                                      "palette1": "keep",
-                                      "palette2": "keep",
-                                      "palette3": "keep",
+                                      "palette0": "default-bg-1",
+                                      "palette1": "default-bg-2",
+                                      "palette2": "default-bg-3",
+                                      "palette3": "default-bg-4",
                                       "palette4": "keep",
                                       "palette5": "keep",
                                       "palette6": "keep",
@@ -394,10 +500,10 @@
                                         {
                                           "command": "EVENT_PALETTE_SET_BACKGROUND",
                                           "args": {
-                                            "palette0": "default-bg-5",
-                                            "palette1": "keep",
-                                            "palette2": "keep",
-                                            "palette3": "keep",
+                                            "palette0": "default-bg-2",
+                                            "palette1": "default-bg-3",
+                                            "palette2": "default-bg-4",
+                                            "palette3": "default-bg-1",
                                             "palette4": "keep",
                                             "palette5": "keep",
                                             "palette6": "keep",
@@ -455,7 +561,7 @@
           {
             "command": "EVENT_WAIT",
             "args": {
-              "time": 1,
+              "time": 0.5,
               "frames": 30,
               "__comment": false
             },

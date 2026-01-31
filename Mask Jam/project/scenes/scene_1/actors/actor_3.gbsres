@@ -289,7 +289,7 @@
             "id": "d0c414b3-c77b-4b88-853d-62e0c187ebf8"
           },
           {
-            "command": "EVENT_SET_FLAGS",
+            "command": "EVENT_ADD_FLAGS",
             "args": {
               "variable": "0",
               "flag1": false,
@@ -307,10 +307,9 @@
               "flag13": false,
               "flag14": false,
               "flag15": false,
-              "flag16": false,
-              "__collapse": false
+              "flag16": false
             },
-            "id": "fa581726-5c9f-4011-9187-858566e97356"
+            "id": "89725d67-2bfb-45b5-bbba-75f5e8af28a5"
           }
         ]
       },
