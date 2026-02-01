@@ -1,6 +1,6 @@
 {
   "_resourceType": "background",
-  "id": "89fb62fd-89d2-4b80-a0c3-0fdcc15c4ba9",
+  "id": "90c01f88-f169-4011-b599-4c7622306eb0",
   "name": "GGJ_BG2",
   "symbol": "bg_ggj_bg2",
   "width": 60,
@@ -8,6 +8,5 @@
   "imageWidth": 480,
   "imageHeight": 144,
   "filename": "GGJ_BG2.png",
-  "tileColors": "",
-  "autoColor": false
+  "tileColors": ""
 }
