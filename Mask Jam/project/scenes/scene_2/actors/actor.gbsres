@@ -1,0 +1,57 @@
+{
+  "_resourceType": "actor",
+  "id": "5c38b336-757c-4fd5-82a2-65e65d7dcd90",
+  "name": "",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "31274c5e-1b18-4a9a-9ce2-df8c511dfca1",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_17",
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "You know, a few \nmonths back I \ntried planting \nsome lavender.",
+          "But when the \nsprouts finally \npopped up, they \nwere\nChrysanthemums!\t\t",
+          "Weird isn't it?",
+          "I don't think the \nsoil can change \nthe seeds...",
+          "maybe I \naccidentally \nbought the wrong \nkind."
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "fbd0260b-ffea-4e95-83da-b912fd5607fe"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 12,
+  "y": 2,
+  "_index": 0
+}

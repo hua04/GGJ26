@@ -30,6 +30,41 @@
       "id": "5",
       "name": "HasMask4",
       "symbol": "var_hasmask4"
+    },
+    {
+      "id": "6",
+      "name": "HasKnife",
+      "symbol": "var_hasknife"
+    },
+    {
+      "id": "e6358fd9-2a5f-4fc7-874a-ef026e3d953f__L1",
+      "name": "Local 1",
+      "symbol": "var_local_1"
+    },
+    {
+      "id": "e6358fd9-2a5f-4fc7-874a-ef026e3d953f__L0",
+      "name": "Local 0",
+      "symbol": "var_local_0"
+    },
+    {
+      "id": "1d33c31d-b989-4ad2-967e-8b4c866cbc03__L0",
+      "name": "InteractedOnce",
+      "symbol": "var_interactedonce"
+    },
+    {
+      "id": "7",
+      "name": "HasBox",
+      "symbol": "var_hasbox"
+    },
+    {
+      "id": "8",
+      "name": "Killed",
+      "symbol": "var_killed"
+    },
+    {
+      "id": "9",
+      "name": "FlowerHave",
+      "symbol": "var_flowerhave"
     }
   ]
 }

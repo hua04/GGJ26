@@ -1,0 +1,63 @@
+{
+  "_resourceType": "actor",
+  "id": "1ff40ed2-d5fd-455f-b6d9-ea063bcea3f3",
+  "name": "",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "53de9e12-ffb8-4450-a187-c3d72cc1e3df",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_5",
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "6",
+        "value": {
+          "type": "true"
+        }
+      },
+      "id": "efce4a25-902d-4b36-9ac7-4e5d6e6e5328"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "=Dagger received="
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "86b10a02-ac99-47c4-b52e-a87fd015fecc"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 7,
+  "y": 6,
+  "_index": 5
+}

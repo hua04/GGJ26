@@ -27,7 +27,8 @@
           }
         },
         "__collapseElse": true,
-        "__comment": true
+        "__comment": true,
+        "__collapse": true
       },
       "children": {
         "true": [
@@ -51,8 +52,8 @@
       "args": {
         "variable": "0",
         "flag": 1,
-        "__collapseElse": false,
-        "__collapse": false
+        "__collapseElse": true,
+        "__collapse": true
       },
       "children": {
         "true": [
@@ -60,8 +61,7 @@
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "go away.",
-                "talk to the next\none."
+                "Don't lose it now!"
               ],
               "__section": "text",
               "avatarId": "",
@@ -79,123 +79,221 @@
               "closeButton": "a",
               "closeDelayTime": 0.5,
               "closeDelayFrames": 30,
-              "__collapse": true
+              "__collapse": false
             },
             "id": "b169ee48-f8f4-47a5-a268-a16c869bd88d"
           }
         ],
         "false": [
           {
-            "command": "EVENT_TEXT",
+            "command": "EVENT_IF",
             "args": {
-              "text": [
-                "I am masker 2"
+              "condition": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "variable",
+                      "value": "6"
+                    },
+                    "__collapseElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "My pocket knife! \nThank goodness you\nfound it.\t",
+                            "Here bud, you've \nearned it."
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "171a672b-e4e8-4fdb-8b2c-832ee5ca1932"
+                      },
+                      {
+                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                        "args": {
+                          "type": "tone",
+                          "priority": "medium",
+                          "pitch": 4,
+                          "frequency": 225,
+                          "duration": 0.2,
+                          "wait": true,
+                          "effect": 0,
+                          "__collapse": true
+                        },
+                        "id": "82b1b74b-224d-404d-b995-14243a483be4"
+                      },
+                      {
+                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                        "args": {
+                          "type": "tone",
+                          "priority": "medium",
+                          "pitch": 4,
+                          "frequency": 300,
+                          "duration": 0.3,
+                          "wait": true,
+                          "effect": 0,
+                          "__collapse": false
+                        },
+                        "id": "d5fe5cbf-f759-4d16-bafd-e20a18ca436c"
+                      },
+                      {
+                        "command": "EVENT_INC_VALUE",
+                        "args": {
+                          "variable": "1",
+                          "__collapse": true
+                        },
+                        "id": "a2a411a9-c101-4f2d-8daa-f44c7cd0b924"
+                      },
+                      {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                          "variable": "0",
+                          "flag1": false,
+                          "flag2": true,
+                          "flag3": false,
+                          "flag4": false,
+                          "flag5": false,
+                          "flag6": false,
+                          "flag7": false,
+                          "flag8": false,
+                          "flag9": false,
+                          "flag10": false,
+                          "flag11": false,
+                          "flag12": false,
+                          "flag13": false,
+                          "flag14": false,
+                          "flag15": false,
+                          "flag16": false
+                        },
+                        "id": "76d58de0-168f-4798-b468-bc1a27775a7c"
+                      },
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "=Mask 2 received=",
+                            "Don’t lose it now!"
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "0d96d1bd-39c1-4a85-8dc1-df779dcf9737"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "No pocket knife, \nno mask.",
+                            " Sorry!"
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "d8f70069-f475-412f-8b4e-940bc0d95bee"
+                      }
+                    ]
+                  },
+                  "id": "1ad381cc-6e2a-4ae4-85d5-9939cc997c96"
+                }
               ],
-              "__section": "text",
-              "avatarId": "",
-              "minHeight": 4,
-              "maxHeight": 7,
-              "textX": 1,
-              "textY": 1,
-              "textHeight": 5,
-              "position": "bottom",
-              "clearPrevious": true,
-              "showFrame": "true",
-              "speedIn": -1,
-              "speedOut": -1,
-              "closeWhen": "key",
-              "closeButton": "a",
-              "closeDelayTime": 0.5,
-              "closeDelayFrames": 30,
-              "__collapse": true
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "My mask? Quite an \nask coming from a \nstranger",
+                      "But perhaps... \nif you help me \nfind my lost \npocket knife, ",
+                      "I could bear to \npart with it."
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30,
+                    "__collapse": false
+                  },
+                  "id": "3f7b0d70-d15f-4344-a1c3-cfc353c5c5b6"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "L0",
+                    "value": {
+                      "type": "true"
+                    }
+                  },
+                  "id": "a36e69b4-a367-4970-a82e-6180bb351a3c"
+                }
+              ]
             },
-            "id": "3f7b0d70-d15f-4344-a1c3-cfc353c5c5b6"
-          },
-          {
-            "command": "EVENT_SOUND_PLAY_EFFECT",
-            "args": {
-              "type": "tone",
-              "priority": "medium",
-              "pitch": 4,
-              "frequency": 225,
-              "duration": 0.2,
-              "wait": true,
-              "effect": 0,
-              "__collapse": false
-            },
-            "id": "ae18571f-563e-4ab0-a59d-ddcf14b428c1"
-          },
-          {
-            "command": "EVENT_SOUND_PLAY_EFFECT",
-            "args": {
-              "type": "tone",
-              "priority": "medium",
-              "pitch": 4,
-              "frequency": 300,
-              "duration": 0.3,
-              "wait": true,
-              "effect": 0,
-              "__collapse": false
-            },
-            "id": "cc365c01-7ba7-4bab-862a-3625337d03f1"
-          },
-          {
-            "command": "EVENT_TEXT",
-            "args": {
-              "text": [
-                "=You got Mask 2="
-              ],
-              "__section": "text",
-              "avatarId": "",
-              "minHeight": 4,
-              "maxHeight": 7,
-              "textX": 1,
-              "textY": 1,
-              "textHeight": 5,
-              "position": "bottom",
-              "clearPrevious": true,
-              "showFrame": "true",
-              "speedIn": -1,
-              "speedOut": -1,
-              "closeWhen": "key",
-              "closeButton": "a",
-              "closeDelayTime": 0.5,
-              "closeDelayFrames": 30,
-              "__collapse": true
-            },
-            "id": "c22c4c64-17ca-4b3a-90c5-da73e9c191da"
-          },
-          {
-            "command": "EVENT_INC_VALUE",
-            "args": {
-              "variable": "1",
-              "__collapse": true
-            },
-            "id": "f943dcff-fbad-455e-b99f-8bb8cf6ffdc0"
-          },
-          {
-            "command": "EVENT_ADD_FLAGS",
-            "args": {
-              "variable": "0",
-              "flag1": false,
-              "flag2": true,
-              "flag3": false,
-              "flag4": false,
-              "flag5": false,
-              "flag6": false,
-              "flag7": false,
-              "flag8": false,
-              "flag9": false,
-              "flag10": false,
-              "flag11": false,
-              "flag12": false,
-              "flag13": false,
-              "flag14": false,
-              "flag15": false,
-              "flag16": false,
-              "__collapse": true
-            },
-            "id": "8d825850-0d39-4b7a-bc67-0c72704c0db9"
+            "id": "0090f7ad-f4ff-47a2-b480-334249fce65b"
           }
         ]
       },

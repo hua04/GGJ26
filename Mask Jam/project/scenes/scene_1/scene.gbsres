@@ -22,6 +22,36 @@
         "text": "Each mask should have an assigned palette that it changes, opening up/revealing a certain group/kind of thing(s)."
       },
       "id": "843d041d-de2d-40ee-b2d7-b4385825fbe1"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "You arrive in the \ntown, your mission\nin mind.",
+          "-The pieces are \nall in place,-",
+          "-you just have to \nfind them-",
+          "-Make sure you \ndon’t rush it,-",
+          "-even the smallest\nmissteps may \nresult in failure-",
+          "-You can’t go back\nonce you’ve gone\nforward-"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 5,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "689bef54-da73-4b59-9e4a-7c508f1e96d0"
     }
   ],
   "playerHit1Script": [],

@@ -20,131 +20,69 @@
       "command": "EVENT_IF_FLAGS_COMPARE",
       "args": {
         "variable": "0",
-        "flag": 3,
+        "flag": 4,
         "__collapseElse": false,
-        "__disableElse": false,
-        "__comment": false,
         "__collapse": false
       },
       "children": {
         "true": [
           {
-            "command": "EVENT_IF_FLAGS_COMPARE",
+            "command": "EVENT_TEXT",
             "args": {
-              "variable": "0",
-              "flag": 2,
-              "__collapseElse": false,
-              "__disableElse": false
+              "text": [
+                "Have fun~"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30,
+              "__collapse": false
+            },
+            "id": "9d89080b-181b-478d-9e5c-74e570990501"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__collapseElse": false
             },
             "children": {
               "true": [
                 {
-                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "command": "EVENT_IF",
                   "args": {
-                    "variable": "0",
-                    "flag": 1,
+                    "condition": {
+                      "type": "variable",
+                      "value": "8"
+                    },
                     "__collapseElse": false,
-                    "__disableElse": false
+                    "__collapse": false
                   },
                   "children": {
                     "true": [
                       {
-                        "command": "EVENT_IF_FLAGS_COMPARE",
-                        "args": {
-                          "variable": "0",
-                          "flag": 0,
-                          "__collapseElse": false,
-                          "__disableElse": false
-                        },
-                        "children": {
-                          "true": [
-                            {
-                              "command": "EVENT_TEXT",
-                              "args": {
-                                "text": [
-                                  "YOU ARE READY."
-                                ],
-                                "__section": "text",
-                                "avatarId": "",
-                                "minHeight": 4,
-                                "maxHeight": 7,
-                                "textX": 3,
-                                "textY": 1,
-                                "textHeight": 5,
-                                "position": "bottom",
-                                "clearPrevious": true,
-                                "showFrame": "true",
-                                "speedIn": -1,
-                                "speedOut": -1,
-                                "closeWhen": "key",
-                                "closeButton": "a",
-                                "closeDelayTime": 0.5,
-                                "closeDelayFrames": 30
-                              },
-                              "id": "df2d640b-2d47-4ae9-a2ec-e8f552c3d9d7"
-                            },
-                            {
-                              "command": "EVENT_FADE_OUT",
-                              "args": {
-                                "speed": "2"
-                              },
-                              "id": "26faa647-0a41-4215-81af-933826c7a7d2"
-                            },
-                            {
-                              "command": "EVENT_SWITCH_SCENE",
-                              "args": {
-                                "sceneId": "9f4ff558-f141-413b-a234-dec1b51d628e",
-                                "x": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "y": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "direction": "",
-                                "fadeSpeed": "2"
-                              },
-                              "id": "85eee9e4-a887-45af-b52a-da3807de736e"
-                            }
-                          ],
-                          "false": [
-                            {
-                              "command": "EVENT_TEXT",
-                              "args": {
-                                "text": [
-                                  "YOU ARE NOT READY"
-                                ],
-                                "__section": "text",
-                                "avatarId": "",
-                                "minHeight": 4,
-                                "maxHeight": 7,
-                                "textX": 1,
-                                "textY": 1,
-                                "textHeight": 5,
-                                "position": "bottom",
-                                "clearPrevious": true,
-                                "showFrame": "true",
-                                "speedIn": -1,
-                                "speedOut": -1,
-                                "closeWhen": "key",
-                                "closeButton": "a",
-                                "closeDelayTime": 0.5,
-                                "closeDelayFrames": 30
-                              },
-                              "id": "aeb73206-a143-4fca-8912-31d876da146a"
-                            }
-                          ]
-                        },
-                        "id": "6285d871-ee09-49da-984c-002d843f07ee"
-                      }
-                    ],
-                    "false": [
-                      {
                         "command": "EVENT_TEXT",
                         "args": {
                           "text": [
-                            "YOU ARE NOT READY"
+                            "Excellent! Youve \ndone well.",
+                            "As promised, your \nmask."
                           ],
                           "__section": "text",
                           "avatarId": "",
@@ -163,11 +101,125 @@
                           "closeDelayTime": 0.5,
                           "closeDelayFrames": 30
                         },
-                        "id": "b6122590-97df-49fb-a3f9-1f86a6b33860"
+                        "id": "4dec1434-d426-45b9-a7f9-02db8ac740f2"
+                      },
+                      {
+                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                        "args": {
+                          "type": "tone",
+                          "priority": "medium",
+                          "pitch": 4,
+                          "frequency": 225,
+                          "duration": 0.2,
+                          "wait": true,
+                          "effect": 0,
+                          "__collapse": true
+                        },
+                        "id": "9c7088a0-5487-4189-9807-972a42754b1b"
+                      },
+                      {
+                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                        "args": {
+                          "type": "tone",
+                          "priority": "medium",
+                          "pitch": 4,
+                          "frequency": 300,
+                          "duration": 0.3,
+                          "wait": true,
+                          "effect": 0,
+                          "__collapse": false
+                        },
+                        "id": "3707dd64-f5e1-4c19-91c3-7ee69f8ac2ed"
+                      },
+                      {
+                        "command": "EVENT_INC_VALUE",
+                        "args": {
+                          "variable": "1",
+                          "__collapse": true
+                        },
+                        "id": "380b5de0-eae9-49d9-86c4-f0d6d0812347"
+                      },
+                      {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                          "variable": "0",
+                          "flag1": false,
+                          "flag2": false,
+                          "flag3": false,
+                          "flag4": false,
+                          "flag5": true,
+                          "flag6": false,
+                          "flag7": false,
+                          "flag8": false,
+                          "flag9": false,
+                          "flag10": false,
+                          "flag11": false,
+                          "flag12": false,
+                          "flag13": false,
+                          "flag14": false,
+                          "flag15": false,
+                          "flag16": false
+                        },
+                        "id": "6e7591ff-8643-4bce-8b38-e57f38491750"
+                      },
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "=Mask 5 received=",
+                            "Can you see it all\nnow? The reality\nof this world?",
+                            "Have fun~"
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "d6dce76d-71c7-40bd-8e1d-d39895042258"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "The flower can be \ngiven to anyone! \n",
+                            "Come see me when \nyou’re done\n"
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "0e549c27-56fb-48e6-859a-7725c8e0e060"
                       }
                     ]
                   },
-                  "id": "45fe6b72-3126-450d-83af-975f6e03cbe0"
+                  "id": "99bdc29b-7194-419e-a86c-9827a1b06b2b"
                 }
               ],
               "false": [
@@ -175,7 +227,57 @@
                   "command": "EVENT_TEXT",
                   "args": {
                     "text": [
-                      "YOU ARE NOT READY"
+                      "Ah, so you want my\nmask?",
+                      "Sure, I can hand \nit over. ",
+                      "But first, this \nflower."
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30,
+                    "__collapse": false
+                  },
+                  "id": "560a60c1-d05f-4b43-b3f8-62ba6e2b33e0"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "9",
+                    "value": {
+                      "type": "true"
+                    }
+                  },
+                  "id": "e0d5e96c-dff0-4c1b-82f3-c275ea70a4b7"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "L0",
+                    "value": {
+                      "type": "true"
+                    }
+                  },
+                  "id": "3f075f48-4857-4e29-b06e-9541a76c2352"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "=Flower received=",
+                      "I need you to give\nit to someone.\nAnyone.",
+                      "Come back to me \nonce it's done."
                     ],
                     "__section": "text",
                     "avatarId": "",
@@ -194,142 +296,15 @@
                     "closeDelayTime": 0.5,
                     "closeDelayFrames": 30
                   },
-                  "id": "f95477e5-78f1-4588-b417-31ed167efcbd"
+                  "id": "d15cbe5c-17fb-4f09-aa1f-4e4e30627b4d"
                 }
               ]
             },
-            "id": "88c5b95b-c8fa-4d89-9fe4-cbc2d92d686f"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_TEXT",
-            "args": {
-              "text": [
-                "YOU ARE NOT READY"
-              ],
-              "__section": "text",
-              "avatarId": "",
-              "minHeight": 4,
-              "maxHeight": 7,
-              "textX": 1,
-              "textY": 1,
-              "textHeight": 5,
-              "position": "bottom",
-              "clearPrevious": true,
-              "showFrame": "true",
-              "speedIn": -1,
-              "speedOut": -1,
-              "closeWhen": "key",
-              "closeButton": "a",
-              "closeDelayTime": 0.5,
-              "closeDelayFrames": 30
-            },
-            "id": "c333dd89-3834-4e70-a40a-916cc1b2a047"
+            "id": "a23b1164-6f80-4ca4-a2f9-b370d348df2f"
           }
         ]
       },
-      "id": "54f3d665-b53f-408e-b4ee-511d37823a94"
-    },
-    {
-      "command": "EVENT_IF",
-      "args": {
-        "condition": {
-          "type": "eq",
-          "valueA": {
-            "type": "variable",
-            "value": "1"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 4
-          }
-        },
-        "__collapseElse": false,
-        "__disableElse": false,
-        "__comment": true
-      },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_TEXT",
-            "args": {
-              "text": [
-                "YOU ARE READY"
-              ],
-              "__section": "layout",
-              "avatarId": "",
-              "minHeight": 4,
-              "maxHeight": 7,
-              "textX": 4,
-              "textY": 1,
-              "textHeight": 5,
-              "position": "bottom",
-              "clearPrevious": true,
-              "showFrame": "true",
-              "speedIn": -1,
-              "speedOut": -1,
-              "closeWhen": "key",
-              "closeButton": "a",
-              "closeDelayTime": 0.5,
-              "closeDelayFrames": 30
-            },
-            "id": "b6c5d3f7-bfee-4acc-8ab3-b66ed317b0e1"
-          },
-          {
-            "command": "EVENT_FADE_OUT",
-            "args": {
-              "speed": "2"
-            },
-            "id": "63472d10-eb8b-4360-82a9-372e62f763ed"
-          },
-          {
-            "command": "EVENT_SWITCH_SCENE",
-            "args": {
-              "sceneId": "9f4ff558-f141-413b-a234-dec1b51d628e",
-              "x": {
-                "type": "number",
-                "value": 9
-              },
-              "y": {
-                "type": "number",
-                "value": 8
-              },
-              "direction": "",
-              "fadeSpeed": 3
-            },
-            "id": "27a2f6c0-a4f2-4dc1-86bc-112db6116463"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_TEXT",
-            "args": {
-              "text": [
-                "YOU ARE NOT READY"
-              ],
-              "__section": "layout",
-              "avatarId": "",
-              "minHeight": 4,
-              "maxHeight": 7,
-              "textX": 1,
-              "textY": 1,
-              "textHeight": 5,
-              "position": "bottom",
-              "clearPrevious": true,
-              "showFrame": "true",
-              "speedIn": -1,
-              "speedOut": -1,
-              "closeWhen": "key",
-              "closeButton": "a",
-              "closeDelayTime": 0.5,
-              "closeDelayFrames": 30
-            },
-            "id": "2740a0e8-0280-4857-8d40-ec92b530ce09"
-          }
-        ]
-      },
-      "id": "099c738b-62ad-4def-bd39-0ec9fc202d03"
+      "id": "e4773b61-a503-4c8e-83ab-966be038cb8f"
     }
   ],
   "startScript": [],
