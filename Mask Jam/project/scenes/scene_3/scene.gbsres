@@ -3,19 +3,27 @@
   "id": "f09ce43b-57a1-4dbf-9d19-a2931ed43054",
   "_index": 2,
   "name": "Scene 3",
-  "backgroundId": "d439f42d-bc9b-4524-8dc0-50299dec437c",
+  "backgroundId": "90c01f88-f169-4011-b599-4c7622306eb0",
   "tilesetId": "",
   "width": 60,
   "height": 18,
   "type": "TOPDOWN",
   "paletteIds": [],
   "spritePaletteIds": [],
-  "collisions": "00438+",
+  "collisions": "001b+0f!004+0f!0033+0f4+004+0f4+00c0+0f2+002+0f2+0036+0f2+002+0f2+0036+0f2+004+0f2+002c+0fa+004+0f2+0036+0f2+002+0f2+0036+0f2+002+0f2+0036+0f2+002+0f2+0020+0f4+0012+0f2+002+0f2+001e+0f8+0014+0f2+003a+0f2+0036+0f6+0036+0f6+0036+0f8+0034+0f8+002+",
   "autoFadeSpeed": 1,
   "symbol": "scene_3",
   "x": 232,
   "y": 192,
-  "script": [],
+  "script": [
+    {
+      "command": "EVENT_MUSIC_PLAY",
+      "args": {
+        "musicId": "739ce1c8-bff3-43e2-b062-9f4129bfa003"
+      },
+      "id": "a6122e24-7528-48d4-8041-7c77c6ddb358"
+    }
+  ],
   "playerHit1Script": [],
   "playerHit2Script": [],
   "playerHit3Script": [],

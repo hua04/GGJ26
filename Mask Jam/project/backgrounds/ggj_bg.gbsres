@@ -1,13 +1,13 @@
 {
   "_resourceType": "background",
-  "id": "d439f42d-bc9b-4524-8dc0-50299dec437c",
-  "name": "LongTest",
-  "symbol": "bg_longtest",
+  "id": "5ec644a7-c973-41b0-bf3d-34d45517b32e",
+  "name": "GGJ_BG",
+  "symbol": "bg_ggj_bg",
   "width": 60,
   "height": 18,
   "imageWidth": 480,
   "imageHeight": 144,
-  "filename": "LongTest.png",
+  "filename": "GGJ_BG.png",
   "tileColors": "",
   "autoColor": false
 }
