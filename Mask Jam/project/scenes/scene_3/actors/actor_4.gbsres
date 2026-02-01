@@ -1,14 +1,12 @@
 {
   "_resourceType": "actor",
-  "id": "2f5ee83d-bc10-401b-bfca-baae33f793f2",
-  "id": "a038d228-ccd0-4a8a-906f-d53e8ace1892",
+  "id": "8f94ebc0-1ede-4dd1-a3a3-ff1a05ca7aa2",
   "name": "",
   "frame": 0,
   "animate": false,
   "spriteSheetId": "31274c5e-1b18-4a9a-9ce2-df8c511dfca1",
   "prefabId": "",
   "direction": "down",
-  "direction": "right",
   "moveSpeed": 1,
   "animSpeed": 15,
   "paletteId": "",
@@ -16,14 +14,14 @@
   "persistent": false,
   "collisionGroup": "",
   "prefabScriptOverrides": {},
-  "symbol": "actor_7",
-  "symbol": "actor_5",
+  "symbol": "actor_10",
   "script": [
     {
       "command": "EVENT_TEXT",
       "args": {
         "text": [
-          "Welcome to \nApoculra, \nwhat brings you to\nour humble town?"
+          "Haven't seen you \naround here \nbefore,",
+          "are you new?"
         ],
         "__section": "text",
         "avatarId": "",
@@ -41,17 +39,17 @@
         "closeButton": "a",
         "closeDelayTime": 0.5,
         "closeDelayFrames": 30,
-        "__collapse": true
+        "__collapse": false
       },
-      "id": "c9221bf7-0f24-4928-a2f4-0b7aa13a0799"
+      "id": "2c1842ad-652d-4cea-a373-138db9e69fc2"
     },
     {
       "command": "EVENT_MENU",
       "args": {
         "variable": "L0",
-        "items": 3,
-        "option1": "Business",
-        "option2": "Friends",
+        "items": 2,
+        "option1": "Yes",
+        "option2": "No",
         "option3": "Curiosity",
         "option4": "",
         "option5": "",
@@ -62,7 +60,7 @@
         "layout": "dialogue",
         "__collapse": false
       },
-      "id": "6e1c1a4f-5140-4db2-8dc3-795328530d14"
+      "id": "bd9d46af-376b-4c09-8018-593b009341c1"
     },
     {
       "command": "EVENT_IF",
@@ -79,7 +77,7 @@
           }
         },
         "__collapseElse": false,
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -87,8 +85,9 @@
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "What kind of \nbusiness could you\nhave in a town \nlike this?",
-                "... Stay safe, \nstranger."
+                "Get out while you \nstill can!!!",
+                "...",
+                "Just kidding! \nHehe~\t"
               ],
               "__section": "text",
               "avatarId": "",
@@ -105,10 +104,9 @@
               "closeWhen": "key",
               "closeButton": "a",
               "closeDelayTime": 0.5,
-              "closeDelayFrames": 30,
-              "__collapse": true
+              "closeDelayFrames": 30
             },
-            "id": "a4b42262-0442-461c-ad8c-fe0a53ad7e40"
+            "id": "85746d85-298f-4854-a75a-efa9b8b6a4f9"
           }
         ],
         "false": [
@@ -126,8 +124,7 @@
                   "value": 2
                 }
               },
-              "__collapseElse": false,
-              "__collapse": true
+              "__collapseElse": false
             },
             "children": {
               "true": [
@@ -135,8 +132,7 @@
                   "command": "EVENT_TEXT",
                   "args": {
                     "text": [
-                      "Friends, huh?",
-                      "...Not sure I \nbelieve you there."
+                      "!S5!Liaaaarrrr!"
                     ],
                     "__section": "text",
                     "avatarId": "",
@@ -155,80 +151,16 @@
                     "closeDelayTime": 0.5,
                     "closeDelayFrames": 30
                   },
-                  "id": "dc11d2b1-24a7-4606-89b7-33cfad91c671"
+                  "id": "14902613-096c-4ce2-a877-17f10b69a092"
                 }
               ],
-              "false": [
-                {
-                  "command": "EVENT_IF",
-                  "args": {
-                    "condition": {
-                      "type": "eq",
-                      "valueA": {
-                        "type": "variable",
-                        "value": "L0"
-                      },
-                      "valueB": {
-                        "type": "number",
-                        "value": 3
-                      }
-                    },
-                    "__collapseElse": true
-                  },
-                  "children": {
-                    "true": [
-                      {
-                        "command": "EVENT_TEXT",
-                        "args": {
-                          "text": [
-                            "Huh, not sure \nthat's the \nsmartest way to \nspend your time.",
-                            "You know what they\nsay about the poor\ncat."
-                          ],
-                          "__section": "text",
-                          "avatarId": "",
-                          "minHeight": 4,
-                          "maxHeight": 7,
-                          "textX": 1,
-                          "textY": 1,
-                          "textHeight": 5,
-                          "position": "bottom",
-                          "clearPrevious": true,
-                          "showFrame": "true",
-                          "speedIn": -1,
-                          "speedOut": -1,
-                          "closeWhen": "key",
-                          "closeButton": "a",
-                          "closeDelayTime": 0.5,
-                          "closeDelayFrames": 30
-                        },
-                        "id": "7e186f90-fe44-4eda-b46e-04211acbde52"
-                      }
-                    ],
-                    "false": []
-                  },
-                  "id": "0a113559-abc4-4794-b388-fe68a7996914"
-                }
-              ]
+              "false": []
             },
-            "id": "8b3fbd8a-8ba1-4436-a22d-ca0313fe2033"
+            "id": "a91377f8-39ea-47df-a687-56416d5d6bcf"
           }
         ]
       },
-      "id": "6bce4fbe-fb57-4b63-87aa-d56c345417f7"
-        "closeDelayFrames": 30
-      },
-      "id": "60dba6ac-ce31-4399-9097-9e8b0f0f6d2d"
-    },
-    {
-      "command": "EVENT_ACTOR_SET_DIRECTION",
-      "args": {
-        "actorId": "$self$",
-        "direction": {
-          "type": "direction",
-          "value": "right"
-        }
-      },
-      "id": "5041cdbf-781e-49b6-b3c6-a04e3cc08edb"
+      "id": "dcf7a1fc-71c3-4a0f-ab79-c05313bec9fb"
     }
   ],
   "startScript": [],
@@ -236,7 +168,7 @@
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
-  "x": 58,
-  "y": 14,
-  "_index": 0
+  "x": 2,
+  "y": 7,
+  "_index": 3
 }

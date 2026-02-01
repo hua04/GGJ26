@@ -1,14 +1,12 @@
 {
   "_resourceType": "actor",
-  "id": "2f5ee83d-bc10-401b-bfca-baae33f793f2",
-  "id": "a038d228-ccd0-4a8a-906f-d53e8ace1892",
+  "id": "d3d2b006-1a82-4c43-bc76-e6983985b978",
   "name": "",
   "frame": 0,
   "animate": false,
   "spriteSheetId": "31274c5e-1b18-4a9a-9ce2-df8c511dfca1",
   "prefabId": "",
   "direction": "down",
-  "direction": "right",
   "moveSpeed": 1,
   "animSpeed": 15,
   "paletteId": "",
@@ -16,14 +14,13 @@
   "persistent": false,
   "collisionGroup": "",
   "prefabScriptOverrides": {},
-  "symbol": "actor_7",
-  "symbol": "actor_5",
+  "symbol": "actor_15",
   "script": [
     {
       "command": "EVENT_TEXT",
       "args": {
         "text": [
-          "Welcome to \nApoculra, \nwhat brings you to\nour humble town?"
+          "Are you excited \nfor the festival?"
         ],
         "__section": "text",
         "avatarId": "",
@@ -43,26 +40,26 @@
         "closeDelayFrames": 30,
         "__collapse": true
       },
-      "id": "c9221bf7-0f24-4928-a2f4-0b7aa13a0799"
+      "id": "b560fe72-c0ae-482e-929c-1ee7a6b1111b"
     },
     {
       "command": "EVENT_MENU",
       "args": {
         "variable": "L0",
         "items": 3,
-        "option1": "Business",
-        "option2": "Friends",
-        "option3": "Curiosity",
+        "option1": "Yes",
+        "option2": "No",
+        "option3": "What Festival?",
         "option4": "",
         "option5": "",
         "option6": "",
         "option7": "",
         "option8": "",
-        "cancelOnB": false,
+        "cancelOnB": true,
         "layout": "dialogue",
-        "__collapse": false
+        "__collapse": true
       },
-      "id": "6e1c1a4f-5140-4db2-8dc3-795328530d14"
+      "id": "1b174a21-4921-43b9-8b70-7408b9e04c1f"
     },
     {
       "command": "EVENT_IF",
@@ -87,8 +84,7 @@
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "What kind of \nbusiness could you\nhave in a town \nlike this?",
-                "... Stay safe, \nstranger."
+                "Yippee! Me too~"
               ],
               "__section": "text",
               "avatarId": "",
@@ -106,9 +102,9 @@
               "closeButton": "a",
               "closeDelayTime": 0.5,
               "closeDelayFrames": 30,
-              "__collapse": true
+              "__collapse": false
             },
-            "id": "a4b42262-0442-461c-ad8c-fe0a53ad7e40"
+            "id": "c299cd10-3915-4834-bb5e-190b2802f2f2"
           }
         ],
         "false": [
@@ -127,7 +123,7 @@
                 }
               },
               "__collapseElse": false,
-              "__collapse": true
+              "__collapse": false
             },
             "children": {
               "true": [
@@ -135,8 +131,8 @@
                   "command": "EVENT_TEXT",
                   "args": {
                     "text": [
-                      "Friends, huh?",
-                      "...Not sure I \nbelieve you there."
+                      "Wha??",
+                      "...Haha! What a \nsilly joke."
                     ],
                     "__section": "text",
                     "avatarId": "",
@@ -155,7 +151,7 @@
                     "closeDelayTime": 0.5,
                     "closeDelayFrames": 30
                   },
-                  "id": "dc11d2b1-24a7-4606-89b7-33cfad91c671"
+                  "id": "e7b70d22-5ecc-4ba2-a692-6258929def30"
                 }
               ],
               "false": [
@@ -181,8 +177,9 @@
                         "command": "EVENT_TEXT",
                         "args": {
                           "text": [
-                            "Huh, not sure \nthat's the \nsmartest way to \nspend your time.",
-                            "You know what they\nsay about the poor\ncat."
+                            "Huh, you don't \nknow??\n",
+                            "Well, maybe I \nshouldn't be \ntalking to you \nabout it then...",
+                            "Sorry!"
                           ],
                           "__section": "text",
                           "avatarId": "",
@@ -201,34 +198,20 @@
                           "closeDelayTime": 0.5,
                           "closeDelayFrames": 30
                         },
-                        "id": "7e186f90-fe44-4eda-b46e-04211acbde52"
+                        "id": "f8350a5e-8484-460a-a544-3913a23a0574"
                       }
                     ],
                     "false": []
                   },
-                  "id": "0a113559-abc4-4794-b388-fe68a7996914"
+                  "id": "8bcfe948-0557-40d7-8321-2c97c8bfc35a"
                 }
               ]
             },
-            "id": "8b3fbd8a-8ba1-4436-a22d-ca0313fe2033"
+            "id": "844daf7a-ed37-4dcb-bfd2-b1b0e23848fb"
           }
         ]
       },
-      "id": "6bce4fbe-fb57-4b63-87aa-d56c345417f7"
-        "closeDelayFrames": 30
-      },
-      "id": "60dba6ac-ce31-4399-9097-9e8b0f0f6d2d"
-    },
-    {
-      "command": "EVENT_ACTOR_SET_DIRECTION",
-      "args": {
-        "actorId": "$self$",
-        "direction": {
-          "type": "direction",
-          "value": "right"
-        }
-      },
-      "id": "5041cdbf-781e-49b6-b3c6-a04e3cc08edb"
+      "id": "8d78c102-abfb-4f24-b060-c4caa233be35"
     }
   ],
   "startScript": [],
@@ -236,7 +219,7 @@
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
-  "x": 58,
-  "y": 14,
-  "_index": 0
+  "x": 6,
+  "y": 7,
+  "_index": 7
 }

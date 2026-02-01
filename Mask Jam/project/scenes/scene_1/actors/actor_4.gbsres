@@ -175,8 +175,7 @@
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "go away.",
-                "talk to the next\none."
+                "Good luck and \ngodspeed."
               ],
               "__section": "text",
               "avatarId": "",
@@ -194,7 +193,7 @@
               "closeButton": "a",
               "closeDelayTime": 0.5,
               "closeDelayFrames": 30,
-              "__collapse": true
+              "__collapse": false
             },
             "id": "4e00f3bc-6bd6-4def-bc10-1bf79fc9ea7f"
           }
@@ -204,7 +203,9 @@
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "I am masker 4"
+                "Oh! Hello there.",
+                "I-I didn’t know \nanyone else knew \nof this place...",
+                "I like to come \nhere to take my \nmind off things."
               ],
               "__section": "text",
               "avatarId": "",
@@ -227,89 +228,235 @@
             "id": "c6e66593-a760-4fbf-8201-6e4795367cf4"
           },
           {
-            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "command": "EVENT_CHOICE",
             "args": {
-              "type": "tone",
-              "priority": "medium",
-              "pitch": 4,
-              "frequency": 275,
-              "duration": 0.2,
-              "wait": true,
-              "effect": 0,
-              "__collapse": false
+              "variable": "L0",
+              "trueText": "What things?",
+              "falseText": "Leave them alone"
             },
-            "id": "ba6c3725-3d67-40f7-b869-fe757d39657b"
+            "id": "f3ae5310-f8e9-4a94-952d-4e67e457073a"
           },
           {
-            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "command": "EVENT_IF",
             "args": {
-              "type": "tone",
-              "priority": "medium",
-              "pitch": 4,
-              "frequency": 300,
-              "duration": 0.3,
-              "wait": true,
-              "effect": 0,
-              "__collapse": false
+              "condition": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__collapseElse": true
             },
-            "id": "514a54f0-a1f1-4665-a0a1-e489e6da1d60"
-          },
-          {
-            "command": "EVENT_TEXT",
-            "args": {
-              "text": [
-                "=You got Mask 4="
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "O-oh? You want to \nlisten?",
+                      "W-well... since \nyou're offering.",
+                      "The t-town... \ndoesn't quite feel\nthe same way it\nused to, I was \nhere when the \n",
+                      "festival first \nstarted, and back \nthen...things were\ndifferent."
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "e2e9824f-2c6c-4914-9aff-330cc47f21dd"
+                },
+                {
+                  "command": "EVENT_CHOICE",
+                  "args": {
+                    "variable": "L0",
+                    "trueText": "Keep listening",
+                    "falseText": "Leave"
+                  },
+                  "id": "1a1c59e8-9330-4fb4-8edb-80958a0934a3"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "condition": {
+                      "type": "variable",
+                      "value": "L0"
+                    },
+                    "__collapseElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "!S3!P-people used to\nbe sure in their \nconvictions, their\nminds and souls \npure. It was \n",
+                            "!S3!easier to feel a \nsense of community\nback then. People \ntalked to one \nanother, helped ",
+                            "!S1!one another out, \nand showed \nsupport. \nN-nowadays it's \nevery person for ",
+                            "!S1!themselves and I\ncan't stand it!"
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "bc41337b-a594-420f-9488-6cac2531d17d"
+                      },
+                      {
+                        "command": "EVENT_CHOICE",
+                        "args": {
+                          "variable": "L0",
+                          "trueText": "Keep listening",
+                          "falseText": "True"
+                        },
+                        "id": "70784d4f-3766-4c6d-8eb3-3098390b4b96"
+                      },
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "...",
+                            "H-hey, thanks for\nlistening.",
+                            "I appreciate it...",
+                            "H-hm? My mask?",
+                            "You know what,\nyeah. I don't need\nit anymore."
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "4b7078d8-83aa-4fe8-b6c7-48c3d9428b97"
+                      },
+                      {
+                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                        "args": {
+                          "type": "tone",
+                          "priority": "medium",
+                          "pitch": 4,
+                          "frequency": 275,
+                          "duration": 0.2,
+                          "wait": true,
+                          "effect": 0,
+                          "__collapse": true
+                        },
+                        "id": "535e0c92-91e1-49c1-9500-adf311ddec3e"
+                      },
+                      {
+                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                        "args": {
+                          "type": "tone",
+                          "priority": "medium",
+                          "pitch": 4,
+                          "frequency": 300,
+                          "duration": 0.3,
+                          "wait": true,
+                          "effect": 0,
+                          "__collapse": true
+                        },
+                        "id": "875051c4-e593-42d4-ad6a-6e0b372727d6"
+                      },
+                      {
+                        "command": "EVENT_INC_VALUE",
+                        "args": {
+                          "variable": "1",
+                          "__collapse": true
+                        },
+                        "id": "ab26fd0f-5123-4457-bb15-b4a15ff2b87c"
+                      },
+                      {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                          "variable": "0",
+                          "flag1": false,
+                          "flag2": false,
+                          "flag3": false,
+                          "flag4": true,
+                          "flag5": false,
+                          "flag6": false,
+                          "flag7": false,
+                          "flag8": false,
+                          "flag9": false,
+                          "flag10": false,
+                          "flag11": false,
+                          "flag12": false,
+                          "flag13": false,
+                          "flag14": false,
+                          "flag15": false,
+                          "flag16": false,
+                          "__collapse": true
+                        },
+                        "id": "65d37ae6-33df-4836-9561-cc7eac7ce044"
+                      },
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "=You got Mask 4=",
+                            "Good luck and \ngodspeed."
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30,
+                          "__collapse": false
+                        },
+                        "id": "796d3420-6306-4fa6-9e1b-ea40f7c1a7d9"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "d960b611-c7fc-4374-a547-c3dc34a51f6a"
+                }
               ],
-              "__section": "text",
-              "avatarId": "",
-              "minHeight": 4,
-              "maxHeight": 7,
-              "textX": 1,
-              "textY": 1,
-              "textHeight": 5,
-              "position": "bottom",
-              "clearPrevious": true,
-              "showFrame": "true",
-              "speedIn": -1,
-              "speedOut": -1,
-              "closeWhen": "key",
-              "closeButton": "a",
-              "closeDelayTime": 0.5,
-              "closeDelayFrames": 30,
-              "__collapse": false
+              "false": []
             },
-            "id": "a89cb0eb-cf26-4b11-904d-65d9af96269d"
-          },
-          {
-            "command": "EVENT_INC_VALUE",
-            "args": {
-              "variable": "1",
-              "__collapse": true
-            },
-            "id": "ef8769e1-a71d-4a99-9967-7e78444e5ceb"
-          },
-          {
-            "command": "EVENT_ADD_FLAGS",
-            "args": {
-              "variable": "0",
-              "flag1": false,
-              "flag2": false,
-              "flag3": false,
-              "flag4": true,
-              "flag5": false,
-              "flag6": false,
-              "flag7": false,
-              "flag8": false,
-              "flag9": false,
-              "flag10": false,
-              "flag11": false,
-              "flag12": false,
-              "flag13": false,
-              "flag14": false,
-              "flag15": false,
-              "flag16": false
-            },
-            "id": "354c2b9c-989a-4573-ae9b-ac520ebd7a0d"
+            "id": "1ab7a98d-d1ab-461f-a878-b0676cb7be18"
           }
         ]
       },

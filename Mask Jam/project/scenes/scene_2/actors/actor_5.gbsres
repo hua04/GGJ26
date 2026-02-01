@@ -1,14 +1,12 @@
 {
   "_resourceType": "actor",
-  "id": "2f5ee83d-bc10-401b-bfca-baae33f793f2",
-  "id": "a038d228-ccd0-4a8a-906f-d53e8ace1892",
+  "id": "44d80c88-7463-47aa-bd27-778943d695e9",
   "name": "",
   "frame": 0,
   "animate": false,
   "spriteSheetId": "31274c5e-1b18-4a9a-9ce2-df8c511dfca1",
   "prefabId": "",
   "direction": "down",
-  "direction": "right",
   "moveSpeed": 1,
   "animSpeed": 15,
   "paletteId": "",
@@ -16,14 +14,14 @@
   "persistent": false,
   "collisionGroup": "",
   "prefabScriptOverrides": {},
-  "symbol": "actor_7",
-  "symbol": "actor_5",
+  "symbol": "actor_21",
   "script": [
     {
       "command": "EVENT_TEXT",
       "args": {
         "text": [
-          "Welcome to \nApoculra, \nwhat brings you to\nour humble town?"
+          "I've never left \nthis town, ",
+          "what's it like to \ngo to other \nplaces?\n"
         ],
         "__section": "text",
         "avatarId": "",
@@ -41,28 +39,28 @@
         "closeButton": "a",
         "closeDelayTime": 0.5,
         "closeDelayFrames": 30,
-        "__collapse": true
+        "__collapse": false
       },
-      "id": "c9221bf7-0f24-4928-a2f4-0b7aa13a0799"
+      "id": "16ec11c5-ad23-41a3-b8cd-a01e86b2e013"
     },
     {
       "command": "EVENT_MENU",
       "args": {
         "variable": "L0",
         "items": 3,
-        "option1": "Business",
-        "option2": "Friends",
-        "option3": "Curiosity",
+        "option1": "Scary",
+        "option2": "Fascinating",
+        "option3": "Exciting",
         "option4": "",
         "option5": "",
         "option6": "",
         "option7": "",
         "option8": "",
-        "cancelOnB": false,
+        "cancelOnB": true,
         "layout": "dialogue",
         "__collapse": false
       },
-      "id": "6e1c1a4f-5140-4db2-8dc3-795328530d14"
+      "id": "0b708b67-5819-48c2-b0b1-203467efcb81"
     },
     {
       "command": "EVENT_IF",
@@ -79,7 +77,7 @@
           }
         },
         "__collapseElse": false,
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -87,8 +85,8 @@
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "What kind of \nbusiness could you\nhave in a town \nlike this?",
-                "... Stay safe, \nstranger."
+                "R-really?",
+                "Thanks for the \ninput, I guess I'm\nnot missing out \non much!"
               ],
               "__section": "text",
               "avatarId": "",
@@ -106,9 +104,9 @@
               "closeButton": "a",
               "closeDelayTime": 0.5,
               "closeDelayFrames": 30,
-              "__collapse": true
+              "__collapse": false
             },
-            "id": "a4b42262-0442-461c-ad8c-fe0a53ad7e40"
+            "id": "70808722-3d53-4f34-b2ef-2ea533d538b1"
           }
         ],
         "false": [
@@ -127,7 +125,7 @@
                 }
               },
               "__collapseElse": false,
-              "__collapse": true
+              "__collapse": false
             },
             "children": {
               "true": [
@@ -135,8 +133,8 @@
                   "command": "EVENT_TEXT",
                   "args": {
                     "text": [
-                      "Friends, huh?",
-                      "...Not sure I \nbelieve you there."
+                      "Oh? I see.",
+                      "Still, there are \nmany interesting \nthings here too!"
                     ],
                     "__section": "text",
                     "avatarId": "",
@@ -155,7 +153,7 @@
                     "closeDelayTime": 0.5,
                     "closeDelayFrames": 30
                   },
-                  "id": "dc11d2b1-24a7-4606-89b7-33cfad91c671"
+                  "id": "91c3cba1-66f0-487f-8c97-948a83971976"
                 }
               ],
               "false": [
@@ -181,8 +179,10 @@
                         "command": "EVENT_TEXT",
                         "args": {
                           "text": [
-                            "Huh, not sure \nthat's the \nsmartest way to \nspend your time.",
-                            "You know what they\nsay about the poor\ncat."
+                            "Huh, you don't \nknow??\n",
+                            "Well, maybe I \nshouldn't be \ntalking to you \nabout it then...",
+                            "Hmm, I've never \nbeen one for too \nmuch excitement.",
+                            "Perhaps I will \nstick to the quiet\ntown life.\n"
                           ],
                           "__section": "text",
                           "avatarId": "",
@@ -201,34 +201,20 @@
                           "closeDelayTime": 0.5,
                           "closeDelayFrames": 30
                         },
-                        "id": "7e186f90-fe44-4eda-b46e-04211acbde52"
+                        "id": "41daa086-3b50-488f-99b0-6fd284934bfd"
                       }
                     ],
                     "false": []
                   },
-                  "id": "0a113559-abc4-4794-b388-fe68a7996914"
+                  "id": "5ab4c60d-5afa-4588-b829-3ec53df5ad98"
                 }
               ]
             },
-            "id": "8b3fbd8a-8ba1-4436-a22d-ca0313fe2033"
+            "id": "6d32e762-f67d-4679-b24f-ca47095a69cd"
           }
         ]
       },
-      "id": "6bce4fbe-fb57-4b63-87aa-d56c345417f7"
-        "closeDelayFrames": 30
-      },
-      "id": "60dba6ac-ce31-4399-9097-9e8b0f0f6d2d"
-    },
-    {
-      "command": "EVENT_ACTOR_SET_DIRECTION",
-      "args": {
-        "actorId": "$self$",
-        "direction": {
-          "type": "direction",
-          "value": "right"
-        }
-      },
-      "id": "5041cdbf-781e-49b6-b3c6-a04e3cc08edb"
+      "id": "64f87a02-8428-4271-a502-8090f4673793"
     }
   ],
   "startScript": [],
@@ -236,7 +222,7 @@
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
-  "x": 58,
-  "y": 14,
-  "_index": 0
+  "x": 12,
+  "y": 10,
+  "_index": 4
 }

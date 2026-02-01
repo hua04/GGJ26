@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "ce550816-5aa9-43a1-b3db-278e5c589e8b",
+  "name": "OtherBG",
+  "symbol": "bg_otherbg",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "filename": "OtherBG.png",
+  "tileColors": "",
+  "autoColor": false
+}
